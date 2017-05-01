@@ -1,0 +1,31 @@
+﻿<!-- Это простой комментарий -->
+<Window x:Class="WpfCalc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="WpfCalc" Height="490" Width="390"
+        WindowStartupLocation="CenterScreen" 
+        Background="WhiteSmoke">
+    <StackPanel Margin="0,10,0,7">
+        <TextBox FontFamily="Consolas" 
+                 x:Name="EditBox" 
+                 x:FieldModifier="private" 
+                 PreviewTextInput="CheckTextInput"
+                 TextChanged="CheckTextChanged"
+                 Height="62" FontSize="25" 
+                 BorderThickness="0" 
+                 Foreground="#FFA06666" 
+                 Background="WhiteSmoke"/>
+        <TextBlock x:Name="ResultBox" 
+                   x:FieldModifier="private" 
+                   Height="55"  
+                   Foreground="#FF4C8787" 
+                   FontSize="20" 
+                   FontFamily="Consolas" />
+        <WrapPanel x:FieldModifier="private" x:Name="ButtonsPanel"/>
+        <TextBlock Text="WpfCalc 1.0, Автор: Даниил Демидко, Copyright © 2017" Foreground="#FF4C8780"/>
+    </StackPanel>
+</Window>
